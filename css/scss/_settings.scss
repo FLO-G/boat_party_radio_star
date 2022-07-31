@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "gilroy-lite";
+    src: url(../fonts/Gilroy-Light.otf);
+    font-style: normal;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "gilroy-xb";
+    src: url(../fonts/Gilroy-ExtraBold.otf);
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  *,
+  ::before,
+  ::after {
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --main: #ff8f5c;
+    --lite: #ffc5a4;
+    --sea: #76a6bb;
+  }

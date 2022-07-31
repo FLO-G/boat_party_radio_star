@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "gilroy-lite";
+  src: url(../fonts/Gilroy-Light.otf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "gilroy-xb";
+  src: url(../fonts/Gilroy-ExtraBold.otf);
+  font-style: normal;
+  font-weight: normal;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main: #ff8f5c;
+  --lite: #ffc5a4;
+  --sea: #76a6bb;
+}
+
+header {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header h1 {
+  color: #ff8f5c;
+  font-size: 5vh;
+}
+header h2 {
+  color: white;
+}
+
+@media screen and (min-width: 850px) {
+  header {
+    margin-top: 20px;
+  }
+  header h1 {
+    font-size: 10vh;
+  }
+  header h2 {
+    font-size: 5vh;
+  }
+}
+@media screen and (max-height: 550px) {
+  header {
+    margin-top: 0;
+  }
+  header h1 {
+    font-size: 10vh;
+  }
+  header h2 {
+    font-family: "gilroy-lite";
+    font-size: 5vh;
+  }
+}
+.demoDate {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 7vh;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  height: 50vh;
+  background-image: url(../img/RS_Logo_Rond_Sunset_Fond_Blanc_RVB.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+@-webkit-keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .wave {
+  position: absolute;
+  bottom: 20vh;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(../img/wave.png);
+  background-size: 1000px 100px;
+}
+section .wave0 {
+  -webkit-animation: animate2 15s linear infinite;
+          animation: animate2 15s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  right: 50px;
+  bottom: 0;
+}
+section .wave1 {
+  -webkit-animation: animate 20s linear infinite;
+          animation: animate 20s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  bottom: 22vh;
+}
+section .wave2 {
+  -webkit-animation: animate2 15s linear infinite;
+          animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.7;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  bottom: 22vh;
+}
+section .wave3 {
+  -webkit-animation: animate 30s linear infinite;
+          animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  bottom: 22vh;
+}
+section .wave4 {
+  -webkit-animation: animate2 5s linear infinite;
+          animation: animate2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.8;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  bottom: 22vh;
+}
+
+.sea {
+  border: 1px solid green;
+  position: absolute;
+  width: 100%;
+  height: 22vh;
+  background-color: #76a6bb;
+  bottom: 0;
+  z-index: 996;
+}
+
+@media screen and (max-height: 450px) {
+  .sea {
+    display: none;
+  }
+  section .wave0 {
+    display: none;
+  }
+  section .wave1,
+section .wave2,
+section .wave3,
+section .wave4 {
+    bottom: 0;
+  }
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "gilroy-xb";
+  background-color: var(--lite);
+  overflow: hidden;
+}/*# sourceMappingURL=index.css.map */
